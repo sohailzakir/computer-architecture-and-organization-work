@@ -1,11 +1,11 @@
-.data 
-num: .asciiz "Enter how many disks you want to move = "
-disc: .asciiz "Number of disks you need to move will be = "
+.data
+num1: .asciiz "Enter how many disks you want to move = "
+movingdisc: .asciiz "Number of disks you need to move will be = "
 .text
 la $t0, 2
 la $t2, 0
 la $t4, 1
-la $a0, num
+la $a0, num1
 li $v0, 4
 syscall
 li $v0, 5
@@ -19,7 +19,7 @@ subi $t1, $t1, 1
 bnez $t1, loop
 
 subi $t4, $t4, 1
-la $a0, disc
+la $a0, movingdisc
 li $v0, 4
 syscall
 move $a0, $t4
