@@ -1,5 +1,5 @@
 .data
-num1: .asciiz "Enter how many disks you want to move = "
+num1:       .asciiz "Enter how many disks you want to move = "
 movingdisc: .asciiz "Number of disks you need to move will be = "
 .text
 la $t0, 2
